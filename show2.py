@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import glob
  
 # pre-trained network.
-Model = './models/stylegan2-ffhq-config-f.pkl'
+Model = 'stylegan2-ffhq-config-f.pkl'
  
 synthesis_kwargs = dict(output_transform=dict(func=tflib.convert_images_to_uint8, nchw_to_nhwc=True), minibatch_size=8)
 _Gs_cache = dict()
@@ -58,7 +58,7 @@ def main():
     generator = Generator(Gs_network, batch_size=1, randomize_noise=False)
  
     os.makedirs(config.dlatents_dir, exist_ok=True)
-    target = np.load(os.path.join(config.dlatents_dir, 'test.npy'))
+    target = np.load(os.path.join(config.dlatents_dir, '1_01.npy'))
  
     #move_and_show(generator,target, "age", [-20, -16, -12, -8, 0, 8, 12, 16, 20])
     #move_and_show(generator,target, "race_black", [-40, -32, -24, -16, 0, 16, 24, 32, 40])

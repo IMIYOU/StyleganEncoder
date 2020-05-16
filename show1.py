@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import glob
  
 # 预训练好的网络模型，来自NVIDIA
-Model = './models/stylegan2-ffhq-config-f.pkl'
+Model = 'stylegan2-ffhq-config-f.pkl'
 _Gs_cache = dict()
  
 # 加载StyleGAN已训练好的网络模型
