@@ -61,7 +61,7 @@ def main():
  
     # 读取对应真实人脸的latent，用于图像变化，qing_01.npy可以替换为你自己的文件名
     os.makedirs(config.dlatents_dir, exist_ok=True)
-    target = np.load(os.path.join(config.dlatents_dir, 'test.npy'))
+    target = np.load(os.path.join(config.dlatents_dir, '1_01_1.npy'))
  
 
     # 混合人脸和变化向量，生成变化后的图片
